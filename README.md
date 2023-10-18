@@ -9,4 +9,5 @@ Suite d'exercices de Javascript.
 3. colors 100%
 4. dates 100%
 5. arrays 100%
-6. objects 25%
+6. objects 100%
+7. classes 100%

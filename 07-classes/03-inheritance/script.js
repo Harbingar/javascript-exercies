@@ -10,10 +10,31 @@
 // You will have time to focus on it later.
 
 (() => {
-    class Animal {
-        sayHello() {
-            return `${this.constructor.greeting}! I'm ${this.name}!`;
+    (() => {
+        class Animal {
+            constructor(name) {
+                this.name = name;
+            }
+    
+            sayHello() {
+                return `${this.constructor.greeting}! I'm ${this.name}!`;
+            }
         }
-    }
-    // your code here
+        // Extention de la class Animal avec l'attribut greeting spécifique à la classe Cat
+        class Cat extends Animal {
+            static greeting = "meow";
+        }
+        // Extention de la class Animal avec l'attribut greeting spécifique à la classe Dog
+        class Dog extends Animal {
+            static greeting = "woof";
+        }
+    
+        document.getElementById("run").addEventListener("click", () => {
+            const cat = new Cat("Chat");
+            const dog = new Dog("Chien");
+    
+            console.log(cat.sayHello());
+            console.log(dog.sayHello());
+        });
+    })();
 })();
