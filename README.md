@@ -11,3 +11,4 @@ Suite d'exercices de Javascript.
 5. arrays 100%
 6. objects 100%
 7. classes 100%
+8. dom 50%

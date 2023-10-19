@@ -12,20 +12,7 @@
 (() => {
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
     // your code here
-    /*
-        const options = {
-            weekday: "long",
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-            hour: "2-digit",
-            minute: "2-digit",
-        }
 
-        let format = new Date().toLocaleDateString("fr-FR", options);
-        alert(format);
-        document.getElementById("target").innerHTML = format;
-        */
         const hour = new Date().getHours();
         const minutes = new Date().getMinutes();
         const day = new Date().getDay();

@@ -11,4 +11,17 @@
 
 (() => {
     // your code here
+
+    const image = document.querySelector("img");
+    const dataHover = image.getAttribute("data-hover");
+
+    image.addEventListener("mouseover", () => {
+        image.src = dataHover;
+    });
+
+    // Changer à volonter en passant par dessus l'image :
+
+    image.addEventListener("mouseout", () => {
+        image.src = "../../_shared/img/kiss.svg";
+    });
 })();

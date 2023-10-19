@@ -11,4 +11,10 @@
 
 (() => {
     // your code here
+
+    const targetElement = document.getElementById("target");
+
+    if(targetElement){
+        targetElement.textContent = "Owned";
+    }
 })();
