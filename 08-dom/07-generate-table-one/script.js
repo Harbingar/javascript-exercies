@@ -11,4 +11,17 @@
 
 (() => {
     // your code here
+    const target = document.getElementById("target");
+    const table = document.createElement("table");
+    const tableBody = document.createElement("tbody");
+
+    for(let i=1; i<11; i++){
+        const tr = document.createElement("tr"); // Crée une balise <tr>
+        const td = document.createElement("td"); // Crée une balise <td>
+        td.innerText = "Rangée : "+ i; // Ajoute la valeur dans la balise <td>
+        tr.appendChild(td); // Donne la balise <td> comme enfant de la balise <tr>
+        tableBody.appendChild(tr); // Donne la balise <tr> comme enfant de la balise <tbody>
+    }
+    table.appendChild(tableBody); // Ajoute la balise <tbody> chargée des 10 rangées dans le tableau
+    target.appendChild(table); // Ajoute le tableau dans la balise <div>
 })();
