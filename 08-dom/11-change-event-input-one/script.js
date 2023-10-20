@@ -11,4 +11,14 @@
 
 (() => {
     // your code here
+    const counter = document.getElementById("counter");
+
+    document.getElementById("pass-one").addEventListener("input", () => {
+        const input = document.getElementById("pass-one").value;
+        counter.textContent = input.length + "/10";
+
+        if(input.length >= 10){
+            document.getElementById("pass-one").value = input.slice(0, 10);
+        }
+    });
 })();

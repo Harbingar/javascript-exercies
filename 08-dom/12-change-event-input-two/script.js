@@ -11,4 +11,16 @@
 
 (() => {
     // your code here
+    const validity = document.getElementById("validity");
+
+    document.getElementById("pass-one").addEventListener("input", () => {
+        const input = document.getElementById("pass-one").value;
+    
+        if (input.length >= 8 && input.match(/\d/g).length >= 2) {
+            validity.textContent = "ok";
+        }
+        else {
+            validity.textContent = "Pas ok";
+        }
+    });
 })();

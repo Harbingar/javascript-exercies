@@ -11,4 +11,20 @@
 
 (() => {
     // your code here
+    const passOneInput = document.getElementById("pass-one");
+    const passTwoInput = document.getElementById("pass-two");
+
+    document.getElementById("run").addEventListener("click", () => {
+        const password1 = passOneInput.value;
+        const password2 = passTwoInput.value;
+
+        if (password1 == password2) {
+            passOneInput.classList.remove('error');
+            passTwoInput.classList.remove('error');
+        }
+        else {
+            passOneInput.classList.add('error');
+            passTwoInput.classList.add('error');
+        }
+    });
 })();
